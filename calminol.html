@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calminol | TM Beauty</title>
+
+<link rel="stylesheet" href="css/products.css">
+<link rel="stylesheet" href="css/responsiveproducts.css">
+
+</head>
+
+<body>
+
+ <!-- NAVBAR -->
+
+ <header class="header">
+
+  <div class="container navbar">
+
+    <div class="logo">
+      TM BEAUTY
+    </div>
+
+    <nav class="nav">
+
+      <ul class="nav-links">
+
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+
+      </ul>
+
+    </nav>
+
+    <button class="menu-toggle">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- PRODUTO -->
+
+<section class="product-container">
+
+  <div class="product-image">
+  
+  <button class="arrow left" onclick="imagemAnterior()">❮</button>
+  
+  <img id="productImg" src="img/products/calminol2.png" alt="Produto">
+  <img id="productImg" src="img/products/calminol3.png" alt="Produto">
+  <img id="productImg" src="img/products/calminol4.png" alt="Produto">
+  <img id="productImg" src="img/products/calminol5.png" alt="Produto">
+  
+  <button class="arrow right" onclick="proximaImagem()">❯</button>
+  
+  </div>
+  
+  
+  <div class="product-info">
+  
+  <h1 class="product-title">
+  Calminol
+  </h1>
+  
+  <p class="product-price">
+  R$ 129,90
+  </p>
+  
+  
+  <div class="quantity-container">
+  
+  <button class="qty-btn" onclick="diminuir()">-</button>
+  
+  <span id="quantidade">1</span>
+  
+  <button class="qty-btn" onclick="aumentar()">+</button>
+  
+  </div>
+  
+  
+  <button class="add-cart">
+  Adicionar ao carrinho
+  </button>
+  
+  </div>
+  
+  </section>
+
+
+
+<!-- BANNER -->
+
+<section class="banner">
+
+<div class="banner-content">
+ESPAÇO PARA BANNER PROMOCIONAL
+</div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<h2>Dúvidas Frequentes</h2>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+O produto é original?
+</div>
+
+<div class="faq-answer">
+Sim. Trabalhamos apenas com produtos originais.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+Qual o prazo de entrega?
+</div>
+
+<div class="faq-answer">
+De 3 a 7 dias úteis dependendo da região.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question">
+O produto possui garantia?
+</div>
+
+<div class="faq-answer">
+Sim. Garantia contra defeitos de fabricação.
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTATO -->
+
+<section class="contact">
+
+<h2>Fale Conosco</h2>
+
+<form id="formWhatsapp">
+
+<input type="text" id="nome" placeholder="Seu nome" required>
+
+<input type="text" id="assunto" placeholder="Assunto" required>
+
+<textarea id="mensagem" placeholder="Mensagem"></textarea>
+
+<button type="submit">
+Enviar para WhatsApp
+</button>
+
+</form>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer id="contato" class="footer">
+
+  <div class="container footer-content">
+
+    <div>
+      <h3>TM BEAUTY</h3>
+      <p>Beleza, saúde e autoestima.</p>
+    </div>
+
+    <div>
+
+      <h4>Links</h4>
+
+      <ul>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h4>Contato</h4>
+
+      <p>Email: contato@tmbeauty.com</p>
+      <p>WhatsApp: (00) 00000-0000</p>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 TM BEAUTY - Todos os direitos reservados</p>
+    <p>Desenvolvido por <a href="https://www.linkedin.com/in/th%C3%A1ssia-minervino-8a5b7926b/" target="_blank" rel="noopener">Thássia Minervino</a></p>
+  </div>
+
+</footer>
+
+
+<script src="js/quantity.js"></script>
+
+</body>
+
+</html>

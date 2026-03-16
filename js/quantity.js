@@ -104,6 +104,6 @@ if (formWhatsapp) {
     const assunto = document.getElementById('assunto').value
     const mensagem = document.getElementById('mensagem').value
     const texto = `Olá, meu nome é ${nome}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`
-    window.open(`https://wa.me/5511999999999?text=${texto}`, '_blank')
+    window.open(`https://wa.me/5518996742364?text=${texto}`, '_blank')
   })
 }

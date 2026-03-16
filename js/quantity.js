@@ -1,145 +1,109 @@
 /* CARROSSEL PRODUTO */
 
-const imagens = [
+const imagens = typeof PRODUCT_IMAGES !== 'undefined'
+  ? PRODUCT_IMAGES
+  : [
+      '../../img/products/calminol2.png',
+      '../../img/products/calminol3.png',
+      '../../img/products/calminol4.png',
+      '../../img/products/calminol5.png'
+    ]
 
-  "../img/products/calminol2.png",
-  "../img/products/calminol3.png",
-  "../img/products/calminol4.png",
-  "../img/products/calminol5.png"
-  
-  ];
-  
-  let indiceImagem = 0;
-  
-  function proximaImagem(){
-  
-  indiceImagem++;
-  
-  if(indiceImagem >= imagens.length){
-  
-  indiceImagem = 0;
-  
-  }
-  
-  document.getElementById("productImg").src = imagens[indiceImagem];
-  
-  }
-  
-  
-  function imagemAnterior(){
-  
-  indiceImagem--;
-  
-  if(indiceImagem < 0){
-  
-  indiceImagem = imagens.length - 1;
-  
-  }
-  
-  document.getElementById("productImg").src = imagens[indiceImagem];
-  
-  }
+let indiceImagem = 0
 
-/* QUANTIDADE */
-
-let quantidade = 1
-
-function aumentar(){
-
-quantidade++
-
-document.getElementById("quantidade").innerText = quantidade
-
+function proximaImagem() {
+  indiceImagem = (indiceImagem + 1) % imagens.length
+  document.getElementById('productImg').src = imagens[indiceImagem]
 }
 
-function diminuir(){
-
-if(quantidade > 1){
-
-quantidade--
-
-document.getElementById("quantidade").innerText = quantidade
-
+function imagemAnterior() {
+  indiceImagem = (indiceImagem - 1 + imagens.length) % imagens.length
+  document.getElementById('productImg').src = imagens[indiceImagem]
 }
 
+
+/* MODAL PLANOS */
+
+const buyNowBtn = document.getElementById('buyNowBtn')
+const buyModal = document.getElementById('buyModal')
+const buyOverlay = document.getElementById('buyOverlay')
+const buyModalClose = document.getElementById('buyModalClose')
+
+let selectedPlan = null
+
+function openBuyModal() {
+  buyModal.classList.add('open')
+  buyOverlay.classList.add('open')
+  document.body.style.overflow = 'hidden'
 }
 
+function closeBuyModal() {
+  buyModal.classList.remove('open')
+  buyOverlay.classList.remove('open')
+  document.body.style.overflow = ''
+  document.querySelectorAll('.buy-option').forEach(o => o.classList.remove('selected-plan'))
+  const container = document.getElementById('checkoutContainer')
+  if (container) container.classList.remove('visible')
+  selectedPlan = null
+}
+
+if (buyNowBtn && buyModal) {
+
+  buyNowBtn.addEventListener('click', openBuyModal)
+  buyModalClose.addEventListener('click', closeBuyModal)
+  buyOverlay.addEventListener('click', closeBuyModal)
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeBuyModal()
+  })
+
+  document.querySelectorAll('.buy-option').forEach(option => {
+    option.addEventListener('click', () => {
+      document.querySelectorAll('.buy-option').forEach(o => o.classList.remove('selected-plan'))
+      option.classList.add('selected-plan')
+      selectedPlan = option.dataset.checkout
+      const container = document.getElementById('checkoutContainer')
+      if (container) {
+        container.classList.add('visible')
+        container.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }
+    })
+  })
+
+  const btnFinalizar = document.getElementById('btnFinalizar')
+  if (btnFinalizar) {
+    btnFinalizar.addEventListener('click', () => {
+      if (selectedPlan) {
+        const url = selectedPlan
+        closeBuyModal()
+        window.location.href = url
+      }
+    })
+  }
+
+}
 
 
 /* FAQ */
 
-document.querySelectorAll(".faq-question").forEach(pergunta=>{
-
-pergunta.addEventListener("click",()=>{
-
-let resposta = pergunta.nextElementSibling
-
-if(resposta.style.display === "block"){
-
-resposta.style.display = "none"
-
-}else{
-
-resposta.style.display = "block"
-
-}
-
+document.querySelectorAll('.faq-question').forEach(pergunta => {
+  pergunta.addEventListener('click', () => {
+    pergunta.closest('.faq-item').classList.toggle('open')
+  })
 })
-
-})
-
 
 
 /* WHATSAPP */
 
-document.getElementById("formWhatsapp").addEventListener("submit",function(e){
+const formWhatsapp = document.getElementById('formWhatsapp')
 
-e.preventDefault()
-
-let nome = document.getElementById("nome").value
-let assunto = document.getElementById("assunto").value
-let mensagem = document.getElementById("mensagem").value
-
-let texto =
-`Olá, meu nome é ${nome}%0A
-Assunto: ${assunto}%0A
-Mensagem: ${mensagem}`
-
-let numero = "5511999999999"
-
-window.open(
-`https://wa.me/${numero}?text=${texto}`,
-"_blank"
-)
-
-})
-
-
-
-/* BOTÃO VOLTAR TOPO */
-
-let botao = document.getElementById("topBtn")
-
-window.onscroll = function(){
-
-if(document.documentElement.scrollTop > 300){
-
-botao.style.display = "block"
-
-}else{
-
-botao.style.display = "none"
-
-}
-
-}
-
-
-function voltarTopo(){
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-})
-
+if (formWhatsapp) {
+  formWhatsapp.addEventListener('submit', function (e) {
+    e.preventDefault()
+    const nome = document.getElementById('nome').value
+    const assunto = document.getElementById('assunto').value
+    const mensagem = document.getElementById('mensagem').value
+    const texto = `Olá, meu nome é ${nome}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`
+    window.open(`https://wa.me/5511999999999?text=${texto}`, '_blank')
+  })
 }

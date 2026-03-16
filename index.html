@@ -2,15 +2,11 @@
 <html lang="pt-BR">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>TM BEAUTY</title>
-
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-
 </head>
 
 <body>
@@ -18,289 +14,280 @@
   <!-- NAVBAR -->
 
   <header class="header">
-
     <div class="container navbar">
 
-      <div class="logo">
-        TM BEAUTY
-      </div>
+      <div class="logo">TM BEAUTY</div>
 
       <nav class="nav">
-
         <ul class="nav-links">
-
           <li><a href="#produtos">Produtos</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#contato">Contato</a></li>
-
         </ul>
-
       </nav>
 
-      <button class="menu-toggle">
-        ☰
-      </button>
+      <div class="navbar-actions">
+        <button class="wishlist-btn" id="wishlistBtn" aria-label="Adicionar aos desejos">
+          <span class="wishlist-icon">♡</span>
+          <span class="wishlist-count" id="wishlistCount">0</span>
+        </button>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
 
     </div>
-
   </header>
 
-<!-- HERO -->
 
-<section class="hero">
-  <img src="img/banner.png" alt="banner" class="hero-bg">
-</section>
+  <!-- HERO -->
+
+  <section class="hero">
+    <video class="hero-bg hero-desktop" autoplay muted loop playsinline>
+      <source src="img/banner.mp4" type="video/mp4">
+    </video>
+    <video class="hero-bg hero-mobile" autoplay muted loop playsinline>
+      <source src="img/banner2.mp4" type="video/mp4">
+    </video>
+  </section>
 
 
   <!-- PRODUTOS -->
 
   <section id="produtos" class="products">
-
     <div class="container">
-
       <h2>Nossos Produtos</h2>
-
       <div class="products-grid">
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="calminol" data-wishlist-name="Calminol"
+          data-wishlist-img="img/products/calminol1.png" data-wishlist-href="pages/products/calminol.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/calminol1.png" alt="Calminol">
           <h3>Calminol</h3>
-          <a href="calminol.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/calminol.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="celuglow" data-wishlist-name="Celuglow"
+          data-wishlist-img="img/products/celuglow1.png" data-wishlist-href="pages/products/celuglow.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/celuglow1.png" alt="Celuglow">
           <h3>Celuglow</h3>
-          <a href="products/celuglow.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/celuglow.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="clarize" data-wishlist-name="Clarize"
+          data-wishlist-img="img/products/clarize1.png" data-wishlist-href="pages/products/clarize.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/clarize1.png" alt="Clarize">
           <h3>Clarize</h3>
-          <a href="products/clarize.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/clarize.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="creagym" data-wishlist-name="CreaGym"
+          data-wishlist-img="img/products/creagym1.png" data-wishlist-href="pages/products/creagym.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/creagym1.png" alt="CreaGym">
           <h3>CreaGym</h3>
-          <a href="products/creagym.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/creagym.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="fiberslim" data-wishlist-name="Fiber Slim"
+          data-wishlist-img="img/products/fiberslim1.png" data-wishlist-href="pages/products/fiberslim.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/fiberslim1.png" alt="Fiber Slim">
           <h3>Fiber Slim</h3>
-          <a href="products/fiberslim.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/fiberslim.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="intifeme" data-wishlist-name="Intifeme"
+          data-wishlist-img="img/products/intifeme1.png" data-wishlist-href="pages/products/intifeme.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/intifeme1.png" alt="Intifeme">
           <h3>Intifeme</h3>
-          <a href="products/intifeme.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/intifeme.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="intimasc" data-wishlist-name="Intimasc"
+          data-wishlist-img="img/products/intimasc1.png" data-wishlist-href="pages/products/intimasc.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/intimasc1.png" alt="Intimasc">
           <h3>Intimasc</h3>
-          <a href="products/intimasc.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/intimasc.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="queromais" data-wishlist-name="Quero +"
+          data-wishlist-img="img/products/queromais1.png" data-wishlist-href="pages/products/queromais.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/queromais1.png" alt="Quero +">
-          <h3>Skin Fit</h3>
-          <a href="products/queromais.html" class="btn-buy">Comprar</a>
+          <h3>Quero +</h3>
+          <a href="pages/products/queromais.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="skinfit" data-wishlist-name="Skin Fit"
+          data-wishlist-img="img/products/skinfit1.png" data-wishlist-href="pages/products/skinfit.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/skinfit1.png" alt="Skin Fit">
           <h3>Skin Fit</h3>
-          <a href="products/skinfit.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/skinfit.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="secaps-black" data-wishlist-name="Secaps Black"
+          data-wishlist-img="img/products/secaps-black1.png" data-wishlist-href="pages/products/secaps-black.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/secaps-black1.png" alt="Secaps Black">
           <h3>Secaps Black</h3>
-          <a href="products/secaps-black.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/secaps-black.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
-          <img src="img/products//toopcor1.png" alt="Toop Cor">
+        <div class="product-card" data-wishlist-id="toopcor" data-wishlist-name="Toop Cor"
+          data-wishlist-img="img/products/toopcor1.png" data-wishlist-href="pages/products/toopcor.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
+          <img src="img/products/toopcor1.png" alt="Toop Cor">
           <h3>Toop Cor</h3>
-          <a href="products/toopcor.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/toopcor.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="longbeauty" data-wishlist-name="Long Beauty"
+          data-wishlist-img="img/products/longbeauty1.png" data-wishlist-href="pages/products/longbeauty.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/longbeauty1.png" alt="Long Beauty">
           <h3>Long Beauty</h3>
-          <a href="products/longbeauty.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/longbeauty.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="secaps-max" data-wishlist-name="Secaps Max"
+          data-wishlist-img="img/products/secaps-max1.png" data-wishlist-href="pages/products/secaps-max.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/secaps-max1.png" alt="Secaps Max">
           <h3>Secaps Max</h3>
-          <a href="products/secaps-max.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/secaps-max.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="neumaxdrops" data-wishlist-name="Neumax Drops"
+          data-wishlist-img="img/products/neumaxdrops1.png" data-wishlist-href="pages/products/neumaxdrops.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/neumaxdrops1.png" alt="Neumax Drops">
           <h3>Neumax Drops</h3>
-          <a href="products/neumaxdrops.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/neumaxdrops.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="secaps-cha" data-wishlist-name="Secaps Chá"
+          data-wishlist-img="img/products/secaps-cha1.png" data-wishlist-href="pages/products/secaps-cha.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/secaps-cha1.png" alt="Secaps Chá">
           <h3>Secaps Chá</h3>
-          <a href="products/secaps-cha.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/secaps-cha.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="passatudo" data-wishlist-name="Passa Tudo"
+          data-wishlist-img="img/products/passatudo1.png" data-wishlist-href="pages/products/passatudo.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/passatudo1.png" alt="Passa Tudo">
           <h3>Passa Tudo</h3>
-          <a href="products/passatudo.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/passatudo.html" class="btn-buy">Comprar</a>
         </div>
 
-
-        <div class="product-card">
+        <div class="product-card" data-wishlist-id="creatinagummy" data-wishlist-name="Creatina Gummy"
+          data-wishlist-img="img/products/creatinagummy1.png" data-wishlist-href="pages/products/creatinagummy.html">
+          <button class="btn-wishlist-card" aria-label="Adicionar à Adicionar aos desejos">♡</button>
           <img src="img/products/creatinagummy1.png" alt="Creatina Gummy">
           <h3>Creatina Gummy</h3>
-          <a href="products/creatinagummy.html" class="btn-buy">Comprar</a>
+          <a href="pages/products/creatinagummy.html" class="btn-buy">Comprar</a>
         </div>
 
-
       </div>
-
     </div>
-
   </section>
-
 
 
   <!-- DEPOIMENTOS -->
 
   <section id="depoimentos" class="testimonials">
-
     <div class="container">
-
       <h2>O que dizem nossos clientes</h2>
-
       <div class="testimonials-grid">
-
         <div class="testimonial">
           <p>"Minha pele melhorou muito!"</p>
           <span>— Ana Paula</span>
         </div>
-
         <div class="testimonial">
           <p>"Entrega rápida e produto de qualidade."</p>
           <span>— Mariana</span>
         </div>
-
         <div class="testimonial">
           <p>"Já é minha terceira compra."</p>
           <span>— Juliana</span>
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
 
   <!-- SOBRE -->
 
   <section id="sobre" class="about">
-
     <div class="container about-content">
-
       <div class="about-text">
-
         <h2>Sobre a TM BEAUTY</h2>
-
-        <p>
-          A TM BEAUTY nasceu com o objetivo de oferecer produtos nutracêuticos
-          e dermocosméticos que ajudam a melhorar a saúde, beleza e autoestima.
-        </p>
-
-        <p>
-          Selecionamos produtos de alta qualidade voltados para cuidados com
-          a pele, bem-estar e performance.
-        </p>
-
+        <p>A TM BEAUTY nasceu com o objetivo de oferecer produtos nutracêuticos e dermocosméticos que ajudam a melhorar
+          a saúde, beleza e autoestima.</p>
+        <p>Selecionamos produtos de alta qualidade voltados para cuidados com a pele, bem-estar e performance.</p>
       </div>
-
       <div class="about-image">
-
-        <img src="img/sobre.jpg" alt="Sobre a marca">
-
+        <img src="img/sobre.png" alt="Sobre a marca">
       </div>
-
     </div>
-
   </section>
-
 
 
   <!-- FOOTER -->
 
   <footer id="contato" class="footer">
-
     <div class="container footer-content">
-
       <div>
         <h3>TM BEAUTY</h3>
         <p>Beleza, saúde e autoestima.</p>
       </div>
-
       <div>
-
         <h4>Links</h4>
-
         <ul>
           <li><a href="#produtos">Produtos</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#sobre">Sobre</a></li>
         </ul>
-
       </div>
-
       <div>
-
         <h4>Contato</h4>
-
         <p>Email: contato@tmbeauty.com</p>
         <p>WhatsApp: (00) 00000-0000</p>
-
       </div>
-
     </div>
-
     <div class="copyright">
       <p>© 2026 TM BEAUTY - Todos os direitos reservados</p>
-      <p>Desenvolvido por <a href="https://www.linkedin.com/in/th%C3%A1ssia-minervino-8a5b7926b/" target="_blank" rel="noopener">Thássia Minervino</a></p>
+      <p>E-commerce desenvolvido por <a href="https://www.linkedin.com/in/th%C3%A1ssia-minervino-8a5b7926b/"
+          target="_blank" rel="noopener">Thássia Minervino</a></p>
     </div>
-
   </footer>
 
 
+  <!-- WISHLIST SIDEBAR -->
+
+  <div class="wishlist-overlay" id="wishlistOverlay"></div>
+
+  <aside class="wishlist-sidebar" id="wishlistSidebar" aria-label="Adicionar aos desejos">
+    <div class="wishlist-header">
+      <h2>Adicionar aos desejos</h2>
+      <button class="wishlist-close" id="wishlistClose" aria-label="Fechar">✕</button>
+    </div>
+    <div class="wishlist-body" id="wishlistBody"></div>
+    <div class="wishlist-footer">
+      <button class="btn-continue" onclick="closeWishlist()">← Continuar comprando</button>
+    </div>
+  </aside>
+
+
+  <script>const ROOT = ''</script>
   <script src="js/main.js"></script>
+  <script src="js/wishlist.js"></script>
 
 </body>
 

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secaps Max | TM Beauty</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/products.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/responsive-products.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="header">
+    <div class="container navbar">
+      <div class="logo">
+        <a href="../../index.html">TM BEAUTY</a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="../../index.html#produtos">Produtos</a></li>
+          <li><a href="../../index.html#depoimentos">Depoimentos</a></li>
+          <li><a href="../../index.html#sobre">Sobre</a></li>
+          <li><a href="../../index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-actions">
+        <button class="wishlist-btn" id="wishlistBtn" aria-label="Adicionar aos desejos">
+          <span class="wishlist-icon">♡</span>
+          <span class="wishlist-count" id="wishlistCount">0</span>
+        </button>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- BREADCRUMB -->
+
+  <div class="breadcrumb">
+    <a href="../../index.html" class="back-link">← Voltar para a loja</a>
+  </div>
+
+
+  <!-- PRODUTO -->
+
+  <section class="product-container">
+
+    <div class="product-image">
+      <button class="arrow left" onclick="imagemAnterior()" aria-label="Imagem anterior">❮</button>
+      <img id="productImg" src="../../img/products/secaps-max1.png" alt="Secaps Max">
+      <button class="arrow right" onclick="proximaImagem()" aria-label="Próxima imagem">❯</button>
+    </div>
+
+    <div class="product-info">
+
+      <h1 class="product-title">Secaps Max</h1>
+
+      <p class="product-description">
+        Descrição do produto. Ajuste conforme necessário.
+      </p>
+
+      <div class="product-price">
+        <div class="price-row">
+          <span class="currency">R$</span>
+          <span class="price-main">197,00</span>
+        </div>
+        <div class="installments">ou 12x de R$ 23,34 no cartão de crédito</div>
+      </div>
+
+      <div class="product-actions">
+
+        <button class="buy-now" id="buyNowBtn">Comprar agora</button>
+
+        <button class="btn-wishlist-product" id="productWishlistBtn" data-wishlist-id="secaps-max"
+          data-wishlist-name="Secaps Max" data-wishlist-img="img/products/secaps-max1.png"
+          data-wishlist-href="pages/products/secaps-max.html" aria-label="Adicionar à Adicionar aos desejos">
+          ♡ &nbsp;Adicionar aos desejos
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BANNER -->
+
+  <section class="banner">
+    <img src="../../img/products/bannersecaps-max.png" alt="Banner promocional Secaps Max">
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="faq">
+
+    <h2>Dúvidas Frequentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">O produto é original?</div>
+      <div class="faq-answer"><span>Sim. Trabalhamos apenas com produtos originais.</span></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Qual o prazo de entrega?</div>
+      <div class="faq-answer"><span>De 3 a 7 dias úteis dependendo da região.</span></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">O produto possui garantia?</div>
+      <div class="faq-answer"><span>Sim. Garantia contra defeitos de fabricação.</span></div>
+    </div>
+
+  </section>
+
+
+  <!-- CONTATO -->
+
+  <section class="contact">
+
+    <h2>Fale Conosco</h2>
+
+    <div class="contact-form-wrapper">
+      <form id="formWhatsapp">
+        <input type="text" id="nome" placeholder="Seu nome" required>
+        <input type="text" id="assunto" placeholder="Assunto" required>
+        <textarea id="mensagem" placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar para WhatsApp</button>
+      </form>
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer id="contato" class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>TM BEAUTY</h3>
+        <p>Beleza, saúde e autoestima.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="../../index.html#produtos">Produtos</a></li>
+          <li><a href="../../index.html#depoimentos">Depoimentos</a></li>
+          <li><a href="../../index.html#sobre">Sobre</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>Email: contato@tmbeauty.com</p>
+        <p>WhatsApp: (00) 00000-0000</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2026 TM BEAUTY - Todos os direitos reservados</p>
+      <p>E-commerce desenvolvido por <a href="https://www.linkedin.com/in/th%C3%A1ssia-minervino-8a5b7926b/"
+          target="_blank" rel="noopener">Thássia Minervino</a></p>
+    </div>
+  </footer>
+
+
+  <!-- MODAL PLANOS -->
+
+  <div class="buy-overlay" id="buyOverlay"></div>
+
+  <div class="buy-modal" id="buyModal" role="dialog" aria-modal="true" aria-label="Escolha a opção ideal para você">
+
+    <div class="buy-modal-header">
+      <h3>Escolha a opção ideal para você</h3>
+      <button class="buy-modal-close" id="buyModalClose" aria-label="Fechar">✕</button>
+    </div>
+
+    <div class="buy-modal-body">
+
+      <!-- GRUPO 1: TRATAMENTO POR PERÍODO -->
+
+      <p class="plan-section-title">Tratamento por período</p>
+
+      <div class="buy-option" data-checkout="">
+        <div class="option-info">
+          <span class="option-name">Secaps Max — 1 Mês</span>
+        </div>
+        <div class="option-right">
+          <span class="option-price">R$ 197,00</span>
+          <span class="option-installments">ou 12x de R$ 20,00</span>
+        </div>
+      </div>
+
+      <div class="buy-option" data-checkout="">
+        <div class="option-info">
+          <span class="option-name">Secaps Max — 3 Meses</span>
+        </div>
+        <div class="option-right">
+          <span class="option-price">R$ 297,00</span>
+          <span class="option-installments">ou 12x de R$ 20,00</span>
+        </div>
+      </div>
+
+      <div class="buy-option" data-checkout="">
+        <div class="option-info">
+          <span class="option-name">Secaps Max — 5 Meses</span>
+        </div>
+        <div class="option-right">
+          <span class="option-price">R$ 397,00</span>
+          <span class="option-installments">ou 12x de R$ 20,00</span>
+        </div>
+      </div>
+
+      <div class="buy-option option-featured" data-checkout="">
+        <span class="option-best"><span>★ Melhor custo-benefício</span></span>
+        <div class="option-info">
+          <span class="option-name">Secaps Max — 12 Meses</span>
+          <span class="option-sub">Tratamento completo</span>
+        </div>
+        <div class="option-right">
+          <span class="option-price">R$ 697,00</span>
+          <span class="option-installments">ou 12x de R$ 20,00</span>
+        </div>
+      </div>
+
+
+      <!-- GRUPO 2: PROMOÇÕES ESPECIAIS -->
+
+      <div class="option-separator">
+        <span>Promoções especiais</span>
+      </div>
+
+      <div class="buy-option" data-checkout="">
+        <div class="option-info">
+          <span class="option-name">Secaps Max 1+1</span>
+        </div>
+        <div class="option-right">
+          <span class="option-price">R$ 197,00</span>
+          <span class="option-installments">ou 12x de R$ 20,00</span>
+        </div>
+      </div>
+
+      <div class="buy-option" data-checkout="">
+        <div class="option-info">
+          <span class="option-name">Secaps Max 2+2</span>
+        </div>
+        <div class="option-right">
+          <span class="option-price">R$ 297,00</span>
+          <span class="option-installments">ou 12x de R$ 20,00</span>
+        </div>
+      </div>
+
+      <div class="buy-option" data-checkout="">
+        <div class="option-info">
+          <span class="option-name">Secaps Max 3+3</span>
+        </div>
+        <div class="option-right">
+          <span class="option-price">R$ 397,00</span>
+          <span class="option-installments">ou 12x de R$ 20,00</span>
+        </div>
+      </div>
+
+      <!-- BOTÃO FINALIZAR COMPRA -->
+
+      <div class="checkout-container" id="checkoutContainer">
+        <button class="btn-finalizar" id="btnFinalizar">Finalizar compra</button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- WISHLIST SIDEBAR -->
+
+  <div class="wishlist-overlay" id="wishlistOverlay"></div>
+
+  <aside class="wishlist-sidebar" id="wishlistSidebar" aria-label="Adicionar aos desejos">
+    <div class="wishlist-header">
+      <h2>Adicionar aos desejos</h2>
+      <button class="wishlist-close" id="wishlistClose" aria-label="Fechar">✕</button>
+    </div>
+    <div class="wishlist-body" id="wishlistBody"></div>
+    <div class="wishlist-footer">
+      <button class="btn-continue" onclick="closeWishlist()">← Continuar comprando</button>
+    </div>
+  </aside>
+
+
+  <script>
+    const ROOT = '../../'
+    const PRODUCT_IMAGES = [
+      '../../img/products/secaps-max1.png',
+      '../../img/products/secaps-max2.png',
+      '../../img/products/secaps-max3.png',
+      '../../img/products/secaps-max4.png'
+    ]
+  </script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/quantity.js"></script>
+  <script src="../../js/wishlist.js"></script>
+
+</body>
+
+</html>

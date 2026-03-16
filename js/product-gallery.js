@@ -1,45 +1,27 @@
+/* GALERIA DE IMAGENS */
+
 const images = [
-  "../img/produtos/celuglow1.jpg",
-  "../img/produtos/celuglow2.jpg",
-  "../img/produtos/celuglow3.jpg"
-  ]
-  
-  let currentImage = 0
-  
-  const productImage = document.getElementById("productImage")
-  
-  const nextBtn = document.querySelector(".next")
-  const prevBtn = document.querySelector(".prev")
-  
-  if(nextBtn && prevBtn){
-  
-  nextBtn.addEventListener("click", () => {
-  
-  currentImage++
-  
-  if(currentImage >= images.length){
-  
-  currentImage = 0
-  
-  }
-  
-  productImage.src = images[currentImage]
-  
+  '../../img/products/celuglow1.png',
+  '../../img/products/celuglow2.png',
+  '../../img/products/celuglow3.png'
+]
+
+let currentImage = 0
+
+const productImage = document.getElementById('productImage')
+const nextBtn = document.querySelector('.arrow.right')
+const prevBtn = document.querySelector('.arrow.left')
+
+if (nextBtn && prevBtn && productImage) {
+
+  nextBtn.addEventListener('click', () => {
+    currentImage = (currentImage + 1) % images.length
+    productImage.src = images[currentImage]
   })
-  
-  
-  prevBtn.addEventListener("click", () => {
-  
-  currentImage--
-  
-  if(currentImage < 0){
-  
-  currentImage = images.length - 1
-  
-  }
-  
-  productImage.src = images[currentImage]
-  
+
+  prevBtn.addEventListener('click', () => {
+    currentImage = (currentImage - 1 + images.length) % images.length
+    productImage.src = images[currentImage]
   })
-  
-  }
+
+}

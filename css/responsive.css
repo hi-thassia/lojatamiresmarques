@@ -21,8 +21,13 @@ TABLET
   grid-template-columns:repeat(3,1fr);
   }
   
-  .testimonials-grid{
-  grid-template-columns:repeat(2,1fr);
+  .reel-viewport{
+  max-width:300px;
+  }
+
+  .reel-arrow{
+  width:42px;
+  height:42px;
   }
   
   .about-content{
@@ -116,10 +121,24 @@ TABLET
   }
   
   
-  /* DEPOIMENTOS */
-  
-  .testimonials-grid{
-  grid-template-columns:1fr;
+  /* REELS */
+
+  .reels-wrapper{
+  gap:12px;
+  }
+
+  .reel-viewport{
+  max-width:260px;
+  }
+
+  .reel-arrow{
+  width:36px;
+  height:36px;
+  }
+
+  .reel-arrow svg{
+  width:18px;
+  height:18px;
   }
   
   

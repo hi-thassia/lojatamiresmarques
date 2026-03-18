@@ -105,7 +105,7 @@ function updateWishlistUI() {
     const inList = isInWishlist(productBtn.dataset.wishlistId)
     productBtn.classList.toggle('active', inList)
     productBtn.innerHTML = inList
-      ? '♥ &nbsp;Na Adicionar aos desejos'
+      ? '♥ &nbsp;Na lista de desejos'
       : '♡ &nbsp;Adicionar aos desejos'
   }
 

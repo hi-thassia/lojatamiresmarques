@@ -148,7 +148,7 @@ ul {
   ========================= */
 
 .products {
-  padding: 80px 0;
+  padding: 40px 0 80px;
 }
 
 .products h2 {
@@ -219,6 +219,20 @@ ul {
   font-weight: 600;
   border: none;
   transition: 0.3s;
+}
+
+/* Stretched link: expande a área clicável do link para cobrir o card inteiro */
+.product-card .btn-buy::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Botão de wishlist fica acima do overlay para continuar funcional */
+.btn-wishlist-card {
+  position: relative;
+  z-index: 2;
 }
 
 .btn-buy:hover {
@@ -366,7 +380,7 @@ ul {
   ========================= */
 
 .about {
-  padding: 80px 0;
+  padding: 80px 0 40px;
 }
 
 .about-content {
@@ -404,9 +418,9 @@ ul {
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer h3 {

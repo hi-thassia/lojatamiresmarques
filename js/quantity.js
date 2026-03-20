@@ -21,6 +21,18 @@ function imagemAnterior() {
   document.getElementById('productImg').src = imagens[indiceImagem]
 }
 
+/* SWIPE (toque mobile) */
+;(function () {
+  const img = document.getElementById('productImg')
+  if (!img) return
+  let startX = 0
+  img.addEventListener('touchstart', e => { startX = e.touches[0].clientX }, { passive: true })
+  img.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 40) diff > 0 ? proximaImagem() : imagemAnterior()
+  }, { passive: true })
+})()
+
 
 /* MODAL PLANOS */
 
@@ -104,6 +116,6 @@ if (formWhatsapp) {
     const assunto = document.getElementById('assunto').value
     const mensagem = document.getElementById('mensagem').value
     const texto = `Olá, meu nome é ${nome}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`
-    window.open(`https://wa.me/5518996742364?text=${texto}`, '_blank')
+    window.open(`https://wa.me/5518996762706?text=${texto}`, '_blank')
   })
 }
